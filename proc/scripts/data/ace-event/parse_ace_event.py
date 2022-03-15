@@ -747,7 +747,8 @@ def one_fold(fold, output_dir, heads_only=True, real_entities_only=True, include
                                 real_entities_only, include_pronouns)
             js = document.to_json()
             to_file.append(js)
-        g.write(json.dumps(js, default=int, indent = 4) + "\n")
+        g.write(json.dumps(to_file, default=int, indent=4))
+        
 
 
 def main():
