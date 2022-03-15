@@ -1,3 +1,7 @@
+# merged some pr for data_convert only, especially for https://github.com/mayubo2333/PAIE .
+
+
+
 # Event Extraction by Answering (Almost) Natural Questions (EMNLP'20)
 
 Question answering for event extraction (trigger detection and argument extraction with various questioning strategies). 
