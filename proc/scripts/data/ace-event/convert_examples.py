@@ -6,7 +6,7 @@ output_dir = "./data/ace-event/processed-data/default-settings/json"
 for fold in ["train", "dev", "test"]:
     g_convert = open(path.join(output_dir, fold + "_convert.json"), "w")
     with open(path.join(output_dir, fold + ".json"), "r") as g:
-        lines= json.loads(g)
+        lines= json.load(g)
         for line in lines:
             sentences = line["sentences"]
             ner = line["ner"]
