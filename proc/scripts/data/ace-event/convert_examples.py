@@ -1,13 +1,14 @@
 from os import path
 import json
 import collections
+import sys
 
 output_dir = "./data/ace-event/processed-data/default-settings/json"
 for fold in ["train", "dev", "test"]:
     g_convert = open(path.join(output_dir, fold + "_convert.json"), "w")
     to_write = []
     with open(path.join(output_dir, fold + ".json"), "r") as g:
-        lines= json.load(g)
+        lines = json.load(g)
         for line in lines:
             sentences = line["sentences"]
             ner = line["ner"]
@@ -30,4 +31,4 @@ for fold in ["train", "dev", "test"]:
                 # if sentence_annotated["s_start"]>5:
                 
                 to_write.append(sentence_annotated)
-            g_convert.write(json.dumps(sentence_annotated, default=int) + "\n")
+          g_convert.write(json.dumps(sentence_annotated, default=int) + "\n")
